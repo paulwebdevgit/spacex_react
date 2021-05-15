@@ -1,6 +1,6 @@
 import React from 'react';
 import './calendar.css';
-
+ 
 const Calendar = () => (
     <section className="calendar">
 		<div className="container">
