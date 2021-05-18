@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Components/Header/Header';
+import Home from './Components/Home/Home';
 import Main from './Components/Main/Main';
 import Features from './Components/Features/Features';
 import Footer from './Components/Footer/Footer';
@@ -14,29 +15,30 @@ class App extends React.Component{
   //   super(props);
   //   console.log(this.fetchData);
   // }
+
   state = {
     rocket: 'Falcon 1',
     rocketFeatures: null,
-    rockets: []
+    rockets: [],
+    company: null
   }
+
   componentDidMount(){
     this.updateRocket();
+    this.getCompany();
   }
 
   updateRocket(){
-    console.log(this.state)
     this.fetchData.getRocket()
-    .then((rockets)=>{
-     rockets = rockets.map(item => item.name);
+    .then((rockets)=>{ 
     //  [rockets[0], rockets[1]] = [rockets[1], rockets[0]]; change array elements
-      this.setState({rockets: rockets})
+      this.setState({rockets: rockets.map(item => item.name)})
       return rockets.find(item => {return item.name === this.state.rocket;})})
-    .then((rocket) =>{
-      this.setState({rocketFeatures: rocket}, ()=>{
-        console.log(this.state) 
+    .then((rocketFeatures) =>{
+      return this.setState({rocketFeatures}, ()=>{
+        console.log(rocketFeatures) 
       });
      })
-    
   }
 
   changeRocket = (rocket) => {
@@ -44,15 +46,20 @@ class App extends React.Component{
       rocket: rocket
     }, this.updateRocket)
   }
-
+  getCompany(){
+    this.fetchData.getCompony().then(company => {
+      console.log(company)
+      this.setState({company})})
+  }
   render(){
-    console.log(this.state)
     return (
       <>
         <Header rockets={this.state.rockets} changeRocket={this.changeRocket}/>
+        {this.state.company && <Home company={this.state.company}/>}
         <Main rocket={this.state.rocket}/>
-        <Features/>
-        <Footer/>
+        {/* условия если есть данные в rocketFeatures */}
+        {this.state.rocketFeatures && <Features {...this.state.rocketFeatures}/>}
+        {this.state.company && <Footer {...this.state.company}/>}
       </>
     );
   }
