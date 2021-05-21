@@ -55,7 +55,7 @@ class App extends React.Component{
   }
   render(){
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Header rockets={this.state.rockets} changeRocket={this.changeRocket}/>
         <Route exact path='/info' 
         render={() =>  this.state.company && <Home company= {this.state.company}/>}/>
