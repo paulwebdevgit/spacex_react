@@ -16,7 +16,7 @@ const Header = ({rockets, changeRocket}) => (
 				{rockets.map((item, i )=> (
 					<li  key={i} className="item">
 					<Link 
-					to="/rocket" 
+					to="/" 
 					onClick={(e) => {
 						// e.preventDefault();
 						changeRocket(item);
@@ -31,7 +31,7 @@ const Header = ({rockets, changeRocket}) => (
 		<nav className="secondary-nav">
 			<ul className="list">
 				<li className="item">
-					<NavLink exact to="/" className="item-link">Home</NavLink>
+					<NavLink exact to="/info" className="item-link">Home</NavLink>
 				</li>
 				<li className="item">
 					<NavLink exact to="/calendar" className="item-link" activeClassName='active'>Calendar</NavLink>

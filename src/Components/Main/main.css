@@ -25,11 +25,12 @@
 
 .video-container {
 	max-width: 1230px;
+	min-height: 300px;
 	margin: 0 auto;
 }
 
 .video {
-	max-width: 100%;
+	max-width: 80%;
 }
 
 @media (max-width: 576px) {
