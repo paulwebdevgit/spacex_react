@@ -6,7 +6,7 @@ const Header = ({rockets, changeRocket}) => (
     <header className="header">
 		<Link to='/spacex_react/'>
 			<img
-					src="./img/logo.svg"
+					src="/spacex_react/img/logo.svg"
 					alt="Logo Space X"
 					className="logo"
 			/>
