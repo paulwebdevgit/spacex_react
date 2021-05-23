@@ -55,22 +55,22 @@ class App extends React.Component{
   }
   render(){
     return (
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter >
       <Header rockets={this.state.rockets} changeRocket={this.changeRocket}/>
-        <Route exact path='/info' 
+        <Route exact path='/spacex_react/info' 
         render={() =>  this.state.company && <Home company= {this.state.company}/>}/>
     
-        <Route exact path='/'>
+        <Route exact path='/spacex_react/'>
           <Main rocket={this.state.rocket}/>
            {/* условия если есть данные в rocketFeatures */}
            {this.state.rocketFeatures && 
             <Features {...this.state.rocketFeatures}/>}
         </Route>
         
-        <Route path='/calendar' component={Calendar}>
+        <Route path='/spacex_react/calendar' component={Calendar}>
         </Route>
         {/* :id это то куда мы указали в url в компоненте Calendar */}
-        <Route path='/details/:id' component={Details}>
+        <Route path='/spacex_react/details/:id' component={Details}>
           {/* <Details/> */}
         </Route>
         

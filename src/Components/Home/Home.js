@@ -8,7 +8,7 @@ const Home = ({ company }) => (
 		<div className="container">
 			<hgroup className="title">
 				<h1>
-					<img className="logo-title" src="img/logo.svg" alt={console.log(company.name)}/>
+					<img className="logo-title" src="./img/logo.svg" alt={console.log(company.name)}/>
 				</h1>
 				<h2 className="subtitle">
 					{company.summary}

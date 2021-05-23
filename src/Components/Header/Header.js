@@ -4,9 +4,9 @@ import {Link, NavLink} from 'react-router-dom'
 
 const Header = ({rockets, changeRocket}) => (
     <header className="header">
-		<Link to='/'>
+		<Link to='/spacex_react/'>
 			<img
-					src="img/logo.svg"
+					src="./img/logo.svg"
 					alt="Logo Space X"
 					className="logo"
 			/>
@@ -16,7 +16,7 @@ const Header = ({rockets, changeRocket}) => (
 				{rockets.map((item, i )=> (
 					<li  key={i} className="item">
 					<Link 
-					to="/" 
+					to="/spacex_react/" 
 					onClick={(e) => {
 						// e.preventDefault();
 						changeRocket(item);
@@ -31,10 +31,10 @@ const Header = ({rockets, changeRocket}) => (
 		<nav className="secondary-nav">
 			<ul className="list">
 				<li className="item">
-					<NavLink exact to="/info" className="item-link">Home</NavLink>
+					<NavLink exact to="/spacex_react/info" className="item-link">Info</NavLink>
 				</li>
 				<li className="item">
-					<NavLink exact to="/calendar" className="item-link" activeClassName='active'>Calendar</NavLink>
+					<NavLink exact to="/spacex_react/calendar" className="item-link" activeClassName='active'>Calendar</NavLink>
 				</li>
 			</ul>
 		</nav>

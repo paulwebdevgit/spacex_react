@@ -13,7 +13,7 @@ const Calendar = () => {
 	
 	return (
 		<>
-			<Main name='Calendar SpaceX'/>
+			<Main name={'Calendar SpaceX'}/>
 			<section className="calendar">
 				{/* <h1 className="calendar-heading">Calendar SpaceX</h1> */}
 				<div className="container">
@@ -29,11 +29,11 @@ const Calendar = () => {
 										{item.name}
 									</h2>
 									<Link 
-										to={`/details/${item.id }`}
+										to={`/spacex_react/details/${item.id }`}
 										className="button launches-details"
 										// onClick={() => props.updateCard(item.id)}
 									>
-										Подробнее
+										More
 									</Link>
 								</div>
 							</article>
