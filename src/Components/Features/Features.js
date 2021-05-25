@@ -46,7 +46,7 @@ const Features = ({name, height, mass, diameter, payload_weights, description}) 
 			</table>
 			<RellaxWrapper speed={14}>
 			<img
-					src={`./img/${rocketImage[name]}`}
+					src={`/spacex_react/img/${rocketImage[name]}`}
 					alt="rocket"
 					className="rocket"
 					// data-rellax-speed="14"

@@ -4,7 +4,7 @@ import './footer.css'
 
 const Footer = ({links}) => (
     <footer className="footer">
-		<img src="img/logo.svg" alt="logo Space X" className="logo"/>
+		<img src="/spacex_react/img/logo.svg" alt="logo Space X" className="logo"/>
 		<nav className="footer-nav">
 			<ul className="list">
 				<li className="item"><a href={links.elon_twitter} rel="noopener noreferrer" target='_blank' className="item-link">Elon Musk Twitter</a></li>

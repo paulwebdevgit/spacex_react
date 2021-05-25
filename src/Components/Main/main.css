@@ -14,7 +14,22 @@
 	margin-top: 0;
 }
 
-.title:after {
+
+.description{
+	font-style: normal;
+	font-weight: normal;
+	
+	margin: 10px auto 0px;
+	color: rgba(255, 255, 255, 0.8);
+	max-width: 320px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    text-transform: lowercase;
+}
+
+.description:after {
 	content: "";
 	display: block;
 	width: 1px;
@@ -29,6 +44,8 @@
 	margin: 0 auto;
 }
 
+
+
 .video {
 	max-width: 80%;
 }
@@ -36,5 +53,8 @@
 @media (max-width: 576px) {
 	.main {
 		padding-top: 50px;
+	}
+	.video-container{
+		min-height: 250px;
 	}
 }

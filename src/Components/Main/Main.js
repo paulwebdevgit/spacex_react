@@ -4,10 +4,18 @@ import './main.css';
 
 
 const video = {
-	'Falcon 1': 'earth',
+	'Falcon Heavy': 'earth',
+	'Falcon 1': 'moon',
 	'Falcon 9': 'mars',
-	'Falcon Heavy': 'moon',
 	other: 'space'
+}
+
+const rocketDescription = {
+	'Falcon Heavy': 'the most powerful operational rocket in the world by a factor of two',
+	'Falcon 1': 'The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006–2009.',
+	'Falcon 9': 'Falcon 9 is a partially reusable two-stage-to-orbit medium-lift launch vehicle designed and manufactured by SpaceX',
+	'Starship': 'The Starship system is a fully reusable, two‑stage‑to‑orbit super heavy‑lift launch vehicle under development by SpaceX.',
+	other: 'SpaceX'
 }
 
 const Main = ({rocket, name}) => {
@@ -18,6 +26,9 @@ const Main = ({rocket, name}) => {
 			<h1 className="title">
 				{rocket ? rocket : name}
 			</h1>
+			<h5 className="description">
+			{rocketDescription[rocket]}
+			</h5>
 			
 			{rocket && <div className="video-container">
 				<video className="video" 
