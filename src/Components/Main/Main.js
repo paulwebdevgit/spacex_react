@@ -32,7 +32,7 @@ const Main = ({rocket, name}) => {
 			
 			{rocket && <div className="video-container">
 				<video className="video" 
-				autoPlay loop muted 
+				playsInline autoPlay loop muted 
 				src={`/spacex_react/video/${video.hasOwnProperty(rocket) ? video[rocket] : video.other}.mp4`}>
 				</video>
 	
